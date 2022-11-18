@@ -49,7 +49,8 @@ phases:
       # タスク定義を更新
       - NEW_TASKDEF=`aws ecs register-task-definition --cli-input-json file://task_definition.json | jq -r '.taskDefinition.taskDefinitionArn'`
       - echo ${NEW_TASKDEF}
-
+      # # サービスを更新
+      # - aws ecs update-service --cluster ${ECS_CLUSTER_NAME_PREFIX}-${ENVIRONMENT} --service ${SERVICE_ARN_PREFIX}-${ENVIRONMENT} --task-definition ${NEW_TASKDEF}
 artifacts:
   files:
     - task_definition.json
