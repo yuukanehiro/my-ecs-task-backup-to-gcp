@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 
 echo -e "[Credentials]\naws_access_key_id = ${AWS_ACCESS_KEY_ID}\naws_secret_access_key = ${AWS_ACCESS_KEY_SECRET}\n\n[s3]\nuse-signv4=True\nhost=s3.ap-northeast-1.amazonaws.com" > /tmp/.boto
 
